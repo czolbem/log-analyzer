@@ -1,0 +1,8 @@
+.idea/
+.venv/
+.gitignore
+tests/
+Dockerfile
+README.md
+requirements-test.txt
+access.log

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "log-analyzer"
+version = "1.0.0"
+description = "A simple command-line tool to parse log files and provide statistics"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE.txt" }
+authors = [
+    { name = "Marc Czolbe" }
+]
+maintainers = [
+    { name = "Marc Czolbe" }
+]
+dependencies = [
+    "pandas >= 2, < 3"
+]
+
+[project.optional-dependencies]
+test = ["pytest >= 8, < 9"]
+
+[project.urls]
+"Homepage" = "https://github.com/czolbem/log-analyzer"
+"Source" = "https://github.com/czolbem/log-analyzer"
+
+[project.scripts]
+analyzer = "analyzer:main"
