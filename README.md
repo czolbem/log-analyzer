@@ -104,7 +104,7 @@ These commands are tested in Windows 10, adjust them for your OS.
    ```
 2. (Optional) Activate the virtual environment
    ```sh
-   <venv>\Scripts\activate.bat
+   <venv>\Scripts\activate.ps1
    ```
 3. To install the analyzer, run this command from the repository root directory
    ```sh
@@ -118,7 +118,15 @@ Call the tool on a command-line with ```analyzer```, e.g.
    analyzer access.log -o results.json --mfip
    ```
 ### Tests
-Run the test suite with pytest, e.g., from the repository root directory
+1. Install test requirements
+   ```sh
+   python -m pip install -r requirements-test.txt
+   ```
+   or
+   ```sh
+   python -m pip install -e .[test]
+   ```
+2. Run the test suite with pytest, e.g., from the repository root directory
    ```sh
    pytest .
    ```
